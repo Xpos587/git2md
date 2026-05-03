@@ -183,9 +183,9 @@ def main() -> None:
         output += f"## Tree for {input_path.name}\n```\n{tree_output}\n```\n\n"
 
         for file_path in input_path.rglob("*"):
-            if file_path.is_file() and not should_ignore(
+            if not should_ignore(
                 str(file_path), [], str(input_path), gitignore_spec
-            ):
+            ) and file_path.is_file():
                 # Скип пустых файлов
                 if file_path.stat().st_size == 0:
                     logger.debug("Skipping empty file: %s", file_path)
