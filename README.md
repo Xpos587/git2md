@@ -1,3 +1,5 @@
+
+
 # 🔄 git2md
 
 ![PyPI](https://img.shields.io/pypi/v/git2md)
@@ -38,7 +40,7 @@ Below is a demonstration of how `git2md` works:
 
 ## 📋 Requirements
 
-- **🐍 Python 3.9 or newer**
+- **🐍 Python 3.10 or newer**
 - **🐧 ~~Linux Operating System~~ Now supports Windows, MacOS, Linux (X11 and Wayland)**
 - **📦 Dependencies**:
   - `pathspec` (for `.gitignore`, `.mdignore`, `.globalignore` support)
