@@ -201,7 +201,11 @@ def main() -> None:
         sys.exit(1)
 
     if args.output:
-        args.output.write_text(output, encoding="utf-8")
+        try:
+            args.output.write_text(output, encoding="utf-8")
+        except OSError as e:
+            logger.error("Cannot write output to '%s': %s", args.output, e)
+            sys.exit(1)
         logger.info("Output written to %s", args.output)
 
     if args.copy:
